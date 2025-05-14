@@ -3,7 +3,12 @@
   <body>
     <form name="caeserForm" id="ceaserForm">
       <label for="userMessage">Enter Message:</label><br />
-      <textarea id="userMessage" rows="4" cols="50" oninput="enDeCode()">
+      <textarea
+        id="userMessage"
+        rows="4"
+        cols="50"
+        oninput="updateHTMLContent()"
+      >
       </textarea>
       <br />
       <br />
@@ -13,10 +18,15 @@
         name="code"
         id="encode"
         checked
-        onchange="enDeCode()"
+        onchange="updateHTMLContent()"
       />
       <label for="decode">Decode:</label>
-      <input type="radio" name="code" id="decode" onchange="enDeCode()" />
+      <input
+        type="radio"
+        name="code"
+        id="decode"
+        onchange="updateHTMLContent()"
+      />
       <br />
       <br />
       <label for="userKey">Key:</label>
@@ -26,13 +36,13 @@
         max="26"
         id="userKey"
         value="1"
-        onchange="enDeCode()"
+        onchange="updateHTMLContent()"
       />
       <br />
       <br />
       <label for="output">Output:</label><br />
-      <textarea id="output" rows="4" cols="50"> </textarea>
+      <textarea id="output" rows="4" cols="50" readonly> </textarea>
     </form>
-    <script src="ceaserCipher.js"></script>
+    <script src="cipher.js"></script>
   </body>
 </html>
