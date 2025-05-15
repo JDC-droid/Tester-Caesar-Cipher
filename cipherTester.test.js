@@ -5,7 +5,7 @@ test("fails if the cipher is not a string", () => {
 });
 
 test("fails if the cipher is empty", () => {
-  //expect(enDeCode("", { checked: true }, 5)).toBe(false);
+  //expect(enDeCode("", { checked: true }, 5)).toBe(false); this is commented out so I could take a step back and fully refactor my test
   if (typeof enDeCode("", { checked: true }, 5) === "string") {
     expect(enDeCode("", { checked: true }, 5)).toBe(false);
   }

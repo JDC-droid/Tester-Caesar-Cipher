@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <form name="caeserForm" id="ceaserForm">
-      <label for="userMessage">Enter Message:</label><br />
-      <textarea
-        id="userMessage"
-        rows="4"
-        cols="50"
-        oninput="updateHTMLContent()"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Scroll Of Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="grid grid-cols-1 md-grid-cols-1 lg-grid-cols-1 bg-[url('https://plus.unsplash.com/premium_photo-1725570022235-31331a924383?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"
+  >
+    <div class="flex text-[#27221f]">
+      <form
+        name="caeserForm"
+        id="ceaserForm"
+        class="flex flex-col justify-center items-center mx-auto bg-[url(https://plus.unsplash.com/premium_photo-1669061097456-a7d45a726580?q=80&w=1138&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] p-10 border-[#b31b1c] border-4 rounded-tl-lg rounded-br-md rounded-tr-sm"
       >
-      </textarea>
-      <br />
-      <br />
-      <label for="encode">Encode:</label>
-      <input
-        type="radio"
-        name="code"
-        id="encode"
-        checked
-        onchange="updateHTMLContent()"
-      />
-      <label for="decode">Decode:</label>
-      <input
-        type="radio"
-        name="code"
-        id="decode"
-        onchange="updateHTMLContent()"
-      />
-      <br />
-      <br />
-      <label for="userKey">Key:</label>
-      <input
-        type="number"
-        min="0"
-        max="26"
-        id="userKey"
-        value="1"
-        onchange="updateHTMLContent()"
-      />
-      <br />
-      <br />
-      <label for="output">Output:</label><br />
-      <textarea id="output" rows="4" cols="50" readonly> </textarea>
-    </form>
+        <div class="p-6">
+          <h1
+            class="font-bold text-4xl text-[#ffbf00] underline bg-[url('https://images.unsplash.com/photo-1707573090083-724caa175c5c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHJlZCUyMHdheHxlbnwwfHwwfHx8MA%3D%3D')] p-2 bg-cover rounded-lg"
+          >
+            The Scroll Of Wisdom
+          </h1>
+        </div>
+        <label for="userMessage" class="text-lg">Speak To Me Mortal</label>
+        <textarea
+          id="userMessage"
+          rows="4"
+          cols="50"
+          oninput="updateHTMLContent()"
+          class="flex justify-center bg-[#f3dfc1] border-[#c99157] border-2 item-center"
+        >
+        </textarea>
+        <br />
+        <h2>Pick Your Enchant</h2>
+        <label for="encode">Encode:</label>
+        <input
+          type="radio"
+          name="code"
+          id="encode"
+          checked
+          onchange="updateHTMLContent()"
+          class="accent-[#9f0000]"
+        />
+        <label for="decode">Decode:</label>
+        <input
+          type="radio"
+          name="code"
+          id="decode"
+          onchange="updateHTMLContent()"
+          class="accent-[#9f0000]"
+        />
+        <br />
+        <label for="userKey">Key:</label>
+        <input
+          type="number"
+          min="0"
+          max="26"
+          id="userKey"
+          value="1"
+          onchange="updateHTMLContent()"
+          class="bg-[#f3dfc1] border-[#c99157] border-2"
+        />
+        <br />
+        <br />
+        <label for="output">Output:</label><br />
+        <textarea
+          id="output"
+          rows="4"
+          cols="50"
+          readonly
+          class="bg-[#f3dfc1] border-[#c99157] border-2"
+        >
+        </textarea>
+      </form>
+    </div>
     <script src="cipher.js"></script>
   </body>
 </html>
